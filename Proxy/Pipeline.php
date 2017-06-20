@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Pipeline\Proxie;
+namespace Viserio\Component\Pipeline\Proxy;
 
+use Viserio\Component\Contracts\Pipeline\Pipeline as PipelineContract;
 use Viserio\Component\StaticalProxy\StaticalProxy;
 
 class Pipeline extends StaticalProxy
@@ -13,6 +14,6 @@ class Pipeline extends StaticalProxy
      */
     public static function getInstanceIdentifier()
     {
-        return 'pipeline';
+        return PipelineContract::class;
     }
 }
